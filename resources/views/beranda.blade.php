@@ -2,7 +2,7 @@
 @section('content')
 <div class="hero2"><div class="w hg">
     <div>
-        <span class="eyebrow">Edukasi Gizi Ibu dan Anak</span>
+        <span class="eyebrow">Nutrigrow</span>
         <h1>Gizi Seimbang, Ibu Sehat, Anak Tumbuh Optimal</h1>
         <q>Selamat datang di media edukasi gizi ibu dan anak!</q>
         <p>Media ini menyediakan informasi dan edukasi mengenai pentingnya pemenuhan gizi seimbang sejak masa kehamilan, menyusui, hingga pemberian Makanan Pendamping ASI (MPASI). Pemenuhan gizi yang tepat merupakan salah satu faktor penting dalam menjaga kesehatan ibu serta mendukung pertumbuhan dan perkembangan anak secara optimal.</p>

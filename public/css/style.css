@@ -8,7 +8,7 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.75 "Nunito Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.15;margin:0 0 .5em;font-weight:600}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:12px;padding:10px 18px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:block;padding:10px 18px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header b{font:600 22px "Cormorant Garamond",serif;flex:1;color:var(--ink)}
 button{font:inherit;cursor:pointer}
 .ib{background:transparent;color:var(--ink);border:1px solid var(--line);width:42px;height:42px;font-size:20px;border-radius:50%}
@@ -55,12 +55,12 @@ footer{text-align:center;color:var(--mute);font-size:14px;padding:22px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
 
-.w{max-width:1100px;margin:0 auto;padding:0 20px}
+.w{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
 main{max-width:none;padding:0 0 56px}
-header{padding:0}.hb{display:flex;align-items:center;gap:16px;min-height:66px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex:1}
+header{padding:0;display:block}.hb{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:66px;width:100%}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);flex-shrink:0}
 .logo b{font:600 23px "Cormorant Garamond",serif}.lg{width:34px;height:34px;border-radius:50%;background:var(--teal);color:var(--onT);display:grid;place-items:center;font-size:16px}
-#top{display:none;gap:4px;align-items:center}
+#top{display:none;gap:6px;align-items:center}
 #top a,#top .dd>span{display:block;padding:10px 14px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;border-radius:10px;cursor:pointer}
 #top a:hover,#top .dd>span:hover,#top a.on{background:var(--limeS);color:var(--teal)}
 .dd{position:relative}.dd>div{display:none;position:absolute;top:100%;left:0;min-width:230px;background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 12px 30px rgba(40,60,50,.12)}
@@ -103,9 +103,70 @@ footer a{display:block;color:#cfd8d1;text-decoration:none;padding:3px 0}footer a
 .pg{background:radial-gradient(circle at 90% 0,var(--rose) 0,transparent 45%),var(--g1)}
 footer{background:#1f3330}.fg{grid-template-columns:1fr}
 @media(min-width:760px){.fg{grid-template-columns:1.3fr 1fr 1fr 1.2fr}}
-.orb{display:grid;gap:16px}.orb .col{display:grid;gap:16px;align-content:start}.orb .ctr{order:-1}
+.orb{display:grid;gap:18px;align-items:stretch}
+.orb .col{display:grid;gap:16px;align-content:start}
+.orb .ctr{order:-1}
 .orb .poster{margin:0;max-width:100%}
-@media(min-width:980px){.orb{grid-template-columns:1fr minmax(300px,400px) 1fr;align-items:start}.orb .ctr{order:0;position:sticky;top:90px}}
+@media(min-width:980px){
+    .orb{grid-template-columns:1fr 1.08fr 1fr;align-items:stretch}
+    .orb .col{display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+    .orb .ctr{order:0;display:flex;align-items:center;justify-content:center}
+    .orb .poster{width:100%;height:100%;max-height:520px;object-fit:contain;border-radius:20px;box-shadow:0 8px 24px rgba(40,50,48,0.12)}
+}
+@media(min-width:720px) and (max-width:979px){
+    .orb{grid-template-columns:1fr 1fr;gap:16px}
+    .orb .ctr{grid-column:1 / -1;order:-1;max-width:440px;margin:0 auto 16px;width:100%}
+    .orb .col{display:flex;flex-direction:column;gap:14px}
+}
+@media(max-width:719px){
+    .orb{display:flex;flex-direction:column;gap:14px}
+    .orb .ctr{order:-1;max-width:380px;margin:0 auto;width:100%}
+    .orb .col{display:flex;flex-direction:column;gap:14px}
+}
+
+/* ==========================================================
+   PLATE GRID (IBU HAMIL & IBU MENYUSUI) - Exact Match to Design
+   ========================================================== */
+.plate-heading{font:600 clamp(22px,3.5vw,28px) "Cormorant Garamond",Georgia,serif;color:var(--ink);margin:28px 0 18px;letter-spacing:-0.2px}
+.intro-card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:20px 24px;color:var(--ink);line-height:1.7;box-shadow:0 4px 18px rgba(30,45,40,0.03)}
+.plate-grid{display:grid;gap:18px;align-items:stretch}
+
+@media(min-width:992px){
+    .plate-grid{grid-template-columns:1fr 1.08fr 1fr}
+    .plate-col{display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+    .plate-center{display:flex;flex-direction:column}
+    .poster-card{flex:1;height:100%;display:flex;align-items:center;justify-content:center}
+}
+
+@media(min-width:720px) and (max-width:991px){
+    .plate-grid{grid-template-columns:1fr 1fr;gap:16px}
+    .plate-center{grid-column:1 / -1;order:-1;max-width:480px;margin:0 auto;width:100%}
+    .plate-col{display:flex;flex-direction:column;gap:14px}
+}
+
+@media(max-width:719px){
+    .plate-grid{display:flex;flex-direction:column;gap:14px}
+    .plate-center{order:-1;width:100%;max-width:100%;margin:0 auto}
+    .plate-col{display:flex;flex-direction:column;gap:12px}
+}
+
+.plate-card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:16px 20px;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(30,45,40,0.03);transition:transform .2s,box-shadow .2s}
+.plate-card:hover{box-shadow:0 8px 22px rgba(30,45,40,0.07)}
+.plate-card h4{font:600 20px "Cormorant Garamond",Georgia,serif;color:var(--ink);margin:0 0 4px;line-height:1.25}
+.plate-contoh{font-size:13.5px;color:var(--mute);margin:0 0 8px;line-height:1.45}
+.plate-lines{font-size:13.5px;color:var(--ink);line-height:1.5}
+.plate-lines p{margin:0 0 3px}
+.plate-lines p:last-child{margin-bottom:0}
+
+.plate-card.air-card{background:var(--limeS);border-color:#ded6c8}
+
+.poster-card{background:#ece4d6;border:1px solid var(--line);border-radius:24px;padding:14px;box-shadow:0 4px 20px rgba(30,45,40,0.05);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.plate-poster{width:100%;height:100%;max-height:530px;object-fit:contain;border-radius:18px;display:block;box-shadow:0 8px 24px rgba(30,45,40,0.12)}
+.ttd-card{background:var(--limeS);border:1px solid var(--line);border-radius:22px;padding:22px 24px;margin-top:24px}
+.ttd-card h3{margin:0 0 8px;font-size:22px}
+
+@media(min-width:900px){.dd>div{right:0;left:auto}}
+
 .pers{display:grid;gap:44px;padding:10px 0}
 .pc{display:grid;gap:16px;align-items:center}
 @media(min-width:860px){.pc{grid-template-columns:380px 1fr;gap:0}.pc.rev{grid-template-columns:1fr 380px}.pc.rev .pb{order:-1;margin:0 -32px 0 0;padding:44px 70px 44px 44px}.pc .pb{margin-left:-32px;padding:44px 44px 44px 70px}}
@@ -126,3 +187,27 @@ footer{background:#1f3330}.fg{grid-template-columns:1fr}
 :root{color-scheme:light}
 .hero2{background:#f4ece3}
 .pg{background:#f4ece3}
+
+/* Global Mobile Touch & Responsive Polish */
+@media(max-width:600px){
+    .w{padding:0 16px}
+    .hero2{padding:36px 0}
+    .hero2 h1{font-size:34px}
+    .hero2 q{font-size:20px}
+    .hero2 p{font-size:15px}
+    .hero2 div>a.btn{display:block;width:100%;text-align:center;margin-top:10px}
+    .btn.ghost{margin-left:0}
+    .card{padding:16px 18px;border-radius:18px}
+    .msg{padding:24px 18px;border-radius:20px}
+    .band2{padding:28px 18px;border-radius:20px}
+    .tabs{gap:6px}
+    .tab{padding:7px 14px;font-size:14px}
+    .pers{gap:28px}
+    .pp{aspect-ratio:3/3.8;border-radius:22px;max-width:380px;margin:0 auto;width:100%}
+    .gl.qt{font-size:14px;padding:10px 14px;bottom:72px}
+    .gl.inf{font-size:11.5px;padding:8px 12px;bottom:10px;gap:6px}
+    .gl.inf b{font-size:12.5px}
+    .pb{padding:20px 16px;border-radius:22px}
+    .pb h3{font-size:26px}
+    .pb h4{font-size:17px}
+}

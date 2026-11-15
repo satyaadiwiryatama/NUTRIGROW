@@ -2,27 +2,68 @@
 @section('title', $title)
 @section('content')
 @include('partials.pagehead')
-@php $plate = config('edukasi.plate'); @endphp
 <div class="w in">
-    <div class="card"><p style="margin:0">{{ $d['intro'] }}</p></div>
-    <h3 style="margin:26px 0 14px">Komponen makanan dalam Isi Piringku</h3>
-    <div class="orb">
-        <div class="col">
-            @foreach([0, 1, 2] as $i)
-                <div class="card comp"><h3>{{ $plate[$i][0] }}</h3><p style="margin:0 0 6px;color:var(--mute)">Contoh: {{ $plate[$i][1] }}.</p>@include('partials.list', ['items' => $d['c'][$i]])</div>
+    <div class="card intro-card">
+        <p style="margin:0">{{ $d['intro'] }}</p>
+    </div>
+
+    <h3 class="plate-heading">Komponen makanan dalam Isi Piringku</h3>
+
+    <div class="plate-grid">
+        {{-- Kolom Kiri: 3 Kartu (Makanan pokok, Protein hewani, Protein nabati) --}}
+        <div class="plate-col plate-left">
+            @foreach(array_slice($d['items'], 0, 3) as $item)
+                <div class="card plate-card">
+                    <h4>{{ $item['title'] }}</h4>
+                    @if(!empty($item['contoh']))
+                        <p class="plate-contoh">{{ $item['contoh'] }}</p>
+                    @endif
+                    <div class="plate-lines">
+                        @foreach($item['lines'] as $line)
+                            <p>{{ $line }}</p>
+                        @endforeach
+                    </div>
+                </div>
             @endforeach
         </div>
-        <div class="ctr"><img class="poster" src="{{ asset('images/'.$img) }}" alt="Poster {{ $title }}"></div>
-        <div class="col">
-            @foreach([3, 4] as $i)
-                <div class="card comp"><h3>{{ $plate[$i][0] }}</h3><p style="margin:0 0 6px;color:var(--mute)">Contoh: {{ $plate[$i][1] }}.</p>@include('partials.list', ['items' => $d['c'][$i]])</div>
+
+        {{-- Kolom Tengah: Poster --}}
+        <div class="plate-col plate-center">
+            <div class="poster-card">
+                <img class="plate-poster" src="{{ asset('images/'.$img) }}" alt="Poster {{ $title }}">
+            </div>
+        </div>
+
+        {{-- Kolom Kanan: 3 Kartu (Sayuran, Buah-buahan, Air putih) --}}
+        <div class="plate-col plate-right">
+            @foreach(array_slice($d['items'], 3, 3) as $item)
+                <div class="card plate-card {{ !empty($item['is_air']) ? 'air-card' : '' }}">
+                    <h4>{{ $item['title'] }}</h4>
+                    @if(!empty($item['contoh']))
+                        <p class="plate-contoh">{{ $item['contoh'] }}</p>
+                    @endif
+                    <div class="plate-lines">
+                        @foreach($item['lines'] as $line)
+                            <p>{{ $line }}</p>
+                        @endforeach
+                    </div>
+                </div>
             @endforeach
-            <div class="band" style="margin:0"><h3>{{ isset($d['ttd']) ? 'Air putih' : 'Kebutuhan air putih' }}</h3>@include('partials.list', ['items' => $d['air']])</div>
         </div>
     </div>
+
     @isset($d['ttd'])
-        <div class="band"><h3>Tablet Tambah Darah (TTD)</h3><p style="margin:0">{{ $d['ttd'] }}</p></div>
+        <div class="band ttd-card">
+            <h3>Tablet Tambah Darah (TTD)</h3>
+            <p style="margin:0">{{ $d['ttd'] }}</p>
+        </div>
     @endisset
-    <div class="msg"><h3>Pesan penting poster</h3><div style="text-align:left;display:inline-block">@include('partials.list', ['items' => $d['pesan']])</div></div>
+
+    <div class="msg" style="margin-top:28px">
+        <h3>Pesan penting poster</h3>
+        <div style="text-align:left;display:inline-block">
+            @include('partials.list', ['items' => $d['pesan']])
+        </div>
+    </div>
 </div>
 @endsection

@@ -26,6 +26,56 @@ return [
     ],
     'hamil' => [
         'intro' => 'Isi Piringku merupakan panduan makan bergizi seimbang dengan memperhatikan jenis, jumlah, dan variasi makanan dalam satu kali makan. Pada ibu hamil, kebutuhan gizi meningkat karena nutrisi dibutuhkan untuk menjaga kesehatan ibu sekaligus mendukung pertumbuhan dan perkembangan janin.',
+        'items' => [
+            [
+                'title' => 'Makanan pokok',
+                'contoh' => 'Nasi, jagung, kentang, ubi',
+                'lines' => [
+                    'Trimester 1: 5 porsi/hari; trimester 2–3: 6 porsi/hari',
+                    '1 porsi = 100 g atau ¾ gelas nasi',
+                ],
+            ],
+            [
+                'title' => 'Protein hewani',
+                'contoh' => 'Ikan, telur, ayam, daging',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 50 g ikan/ayam atau 1 butir telur',
+                ],
+            ],
+            [
+                'title' => 'Protein nabati',
+                'contoh' => 'Tahu, tempe, kacang-kacangan',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 50 g tempe atau 100 g tahu',
+                ],
+            ],
+            [
+                'title' => 'Sayuran',
+                'contoh' => 'Bayam, wortel, brokoli',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 100 g atau 1 mangkuk sayur matang',
+                ],
+            ],
+            [
+                'title' => 'Buah-buahan',
+                'contoh' => 'Jeruk, pisang, pepaya',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 100 g',
+                ],
+            ],
+            [
+                'title' => 'Air putih',
+                'contoh' => null,
+                'is_air' => true,
+                'lines' => [
+                    'Dianjurkan 8–12 gelas per hari untuk mencegah dehidrasi dan melancarkan pencernaan.',
+                ],
+            ],
+        ],
         'c' => [
             [
                 'Berfungsi sebagai sumber energi bagi ibu dan janin.',
@@ -68,6 +118,56 @@ return [
     ],
     'menyusui' => [
         'intro' => 'Ibu menyusui membutuhkan asupan gizi yang cukup dan seimbang untuk menjaga kesehatan tubuh serta mendukung produksi ASI. Nutrisi yang dikonsumsi ibu juga membantu memenuhi kebutuhan zat gizi bayi melalui ASI.',
+        'items' => [
+            [
+                'title' => 'Makanan pokok',
+                'contoh' => 'Nasi, jagung, kentang, ubi',
+                'lines' => [
+                    '6 porsi/hari',
+                    '1 porsi = 100 g atau ¾ gelas nasi',
+                ],
+            ],
+            [
+                'title' => 'Protein hewani',
+                'contoh' => 'Ikan, telur, ayam, daging',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 50 g ikan atau 55 g telur ayam',
+                ],
+            ],
+            [
+                'title' => 'Protein nabati',
+                'contoh' => 'Tahu, tempe, kacang-kacangan',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 50 g tempe atau 100 g tahu',
+                ],
+            ],
+            [
+                'title' => 'Sayuran',
+                'contoh' => 'Bayam, wortel, brokoli, sayuran hijau',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 100 g atau 1 mangkuk sayur matang',
+                ],
+            ],
+            [
+                'title' => 'Buah-buahan',
+                'contoh' => 'Jeruk, pisang, pepaya, buah lainnya',
+                'lines' => [
+                    '4 porsi/hari',
+                    '1 porsi = 100 g',
+                ],
+            ],
+            [
+                'title' => 'Air putih',
+                'contoh' => null,
+                'is_air' => true,
+                'lines' => [
+                    'Dianjurkan 14 gelas/hari (6 bulan pertama) dan 12 gelas/hari (6 bulan kedua) untuk mencegah dehidrasi dan menjaga produksi ASI.',
+                ],
+            ],
+        ],
         'c' => [
             [
                 'Sumber energi untuk mendukung aktivitas ibu dan proses menyusui.',
