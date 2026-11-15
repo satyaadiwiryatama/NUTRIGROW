@@ -5,7 +5,7 @@
 </div></div>
 <div class="dd"><span tabindex="0">MPASI ▾</span><div>
     @foreach(config('edukasi.mpasi') as $slug => $m)
-        <a href="{{ route('mpasi', $slug) }}">{{ str_replace('-', '–', $slug) }} bulan</a>
+        <a href="{{ route('mpasi', $slug) }}">{{ $slug }} bulan</a>
     @endforeach
 </div></div>
 <a href="{{ route('about') }}" @class(['on' => request()->routeIs('about')])>About Me</a>

@@ -31,7 +31,7 @@ return [
                 'title' => 'Makanan pokok',
                 'contoh' => 'Nasi, jagung, kentang, ubi',
                 'lines' => [
-                    'Trimester 1: 5 porsi/hari; trimester 2–3: 6 porsi/hari',
+                    'Trimester 1: 5 porsi/hari; trimester 2-3: 6 porsi/hari',
                     '1 porsi = 100 g atau ¾ gelas nasi',
                 ],
             ],
@@ -72,7 +72,7 @@ return [
                 'contoh' => null,
                 'is_air' => true,
                 'lines' => [
-                    'Dianjurkan 8–12 gelas per hari untuk mencegah dehidrasi dan melancarkan pencernaan.',
+                    'Dianjurkan 8-12 gelas per hari untuk mencegah dehidrasi dan melancarkan pencernaan.',
                 ],
             ],
         ],
@@ -105,7 +105,7 @@ return [
         ],
         'ttd' => 'Ibu hamil dianjurkan mengonsumsi 1 tablet tambah darah setiap hari selama kehamilan sesuai anjuran tenaga kesehatan. TTD membantu mencegah anemia akibat kekurangan zat besi sehingga mendukung pembentukan hemoglobin dan pengangkutan oksigen dalam tubuh.',
         'air' => [
-            'Dianjurkan minum 8–12 gelas per hari sesuai kebutuhan.',
+            'Dianjurkan minum 8-12 gelas per hari sesuai kebutuhan.',
             'Membantu mencegah dehidrasi.',
             'Membantu menjaga keseimbangan cairan dan melancarkan pencernaan.',
         ],
@@ -210,7 +210,7 @@ return [
     ],
     'mpasi' => [
         '6-8' => [
-            't' => '6–8 bulan',
+            't' => '6-8 bulan',
             's' => 'Tahap awal MPASI',
             'img' => 'm6.jpg',
             'tek' => [
@@ -220,10 +220,10 @@ return [
                 'Hindari makanan yang masih berbentuk potongan besar.',
             ],
             'por' => [
-                'Awali dengan 2–3 sendok makan setiap kali makan.',
+                'Awali dengan 2-3 sendok makan setiap kali makan.',
                 'Tingkatkan secara bertahap hingga ½ mangkuk ukuran 250 ml.',
-                'Frekuensi: 2–3 kali makan utama sehari.',
-                'Tambahkan 1–2 kali makanan selingan sesuai kebutuhan.',
+                'Frekuensi: 2-3 kali makan utama sehari.',
+                'Tambahkan 1-2 kali makanan selingan sesuai kebutuhan.',
                 'ASI tetap diberikan sesuai keinginan bayi.',
             ],
             'mk' => [
@@ -243,7 +243,7 @@ return [
             ],
         ],
         '9-11' => [
-            't' => '9–11 bulan',
+            't' => '9-11 bulan',
             's' => 'Tahap pengenalan tekstur',
             'img' => 'm9.jpg',
             'tek' => [
@@ -254,8 +254,8 @@ return [
             ],
             'por' => [
                 'Sekitar ½ mangkuk ukuran 250 ml setiap kali makan.',
-                'Frekuensi: 3–4 kali makan utama sehari.',
-                'Tambahkan 1–2 kali makanan selingan.',
+                'Frekuensi: 3-4 kali makan utama sehari.',
+                'Tambahkan 1-2 kali makanan selingan.',
                 'ASI tetap diberikan sesuai keinginan bayi.',
             ],
             'mk' => [
@@ -275,7 +275,7 @@ return [
             ],
         ],
         '12-23' => [
-            't' => '12–23 bulan',
+            't' => '12-23 bulan',
             's' => 'Tahap makanan keluarga',
             'img' => 'm12.jpg',
             'tek' => [
@@ -286,9 +286,9 @@ return [
                 'Pastikan makanan cukup lunak dan mudah dikunyah.',
             ],
             'por' => [
-                'Sekitar ¾–1 mangkuk ukuran 250 ml setiap kali makan.',
-                'Frekuensi: 3–4 kali makan utama sehari.',
-                'Tambahkan 1–2 kali makanan selingan.',
+                'Sekitar ¾-1 mangkuk ukuran 250 ml setiap kali makan.',
+                'Frekuensi: 3-4 kali makan utama sehari.',
+                'Tambahkan 1-2 kali makanan selingan.',
                 'ASI tetap dilanjutkan hingga usia 2 tahun atau lebih.',
                 'Sesuaikan porsi dengan kebutuhan dan nafsu makan anak.',
             ],
@@ -330,21 +330,21 @@ return [
             'route' => 'mpasi',
             'usia' => '6-8',
             'img' => 'm6.jpg',
-            'title' => 'MPASI Usia 6–8 Bulan',
+            'title' => 'MPASI Usia 6-8 Bulan',
             'desc' => 'Mengenal tahap awal pemberian MPASI, tekstur makanan lumat, pengenalan berbagai bahan makanan, serta pengaturan porsi dan frekuensi makan bayi.',
         ],
         [
             'route' => 'mpasi',
             'usia' => '9-11',
             'img' => 'm9.jpg',
-            'title' => 'MPASI Usia 9–11 Bulan',
+            'title' => 'MPASI Usia 9-11 Bulan',
             'desc' => 'Mempelajari peningkatan tekstur makanan menjadi cincang halus dan makanan lembek, pengenalan finger food, serta pemenuhan kebutuhan gizi bayi.',
         ],
         [
             'route' => 'mpasi',
             'usia' => '12-23',
             'img' => 'm12.jpg',
-            'title' => 'MPASI Usia 12–23 Bulan',
+            'title' => 'MPASI Usia 12-23 Bulan',
             'desc' => 'Mengenal pemberian makanan keluarga, variasi menu bergizi seimbang, latihan makan mandiri, serta pembentukan kebiasaan makan sehat pada anak.',
         ],
     ],
