@@ -19,7 +19,7 @@
 <footer>
     <div class="w fg">
         <div><div class="logo"><span class="lg">✦</span><b>Nutrigrow</b></div><p>Gizi Seimbang, Ibu Sehat, Anak Tumbuh Optimal.</p></div>
-        <div><h4>Navigasi</h4><a href="{{ route('beranda') }}">Beranda</a><a href="{{ route('about') }}">About Me</a></div>
+        <div><h4>Navigasi</h4><a href="{{ route('beranda') }}">Beranda</a><a href="{{ route('konseling') }}">Konseling</a><a href="{{ route('about') }}">About Me</a></div>
         <div><h4>Materi</h4><a href="{{ route('hamil') }}">Isi Piringku Ibu Hamil</a><a href="{{ route('menyusui') }}">Isi Piringku Ibu Menyusui</a><a href="{{ route('mpasi') }}">MPASI 6-23 Bulan</a></div>
         <div><h4>Hubungi Kami</h4><a href="tel:{{ str_replace([' ', '-'], '', config('edukasi.phone')) }}">📞 {{ config('edukasi.phone') }}</a><a href="https://wa.me/{{ config('edukasi.wa') }}">WhatsApp</a></div>
     </div>

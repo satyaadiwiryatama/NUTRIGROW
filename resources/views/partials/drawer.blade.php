@@ -4,4 +4,5 @@
 @foreach(config('edukasi.mpasi') as $slug => $m)
     <a href="{{ route('mpasi', $slug) }}">MPASI {{ $slug }} bulan</a>
 @endforeach
+<a href="{{ route('konseling') }}">Konseling</a>
 <a href="{{ route('about') }}">About Me</a>

@@ -27,6 +27,11 @@ class PageController extends Controller
         return view('mpasi', ['all' => $all, 'usia' => $usia, 'm' => $all[$usia]]);
     }
 
+    public function konseling()
+    {
+        return view('konseling', ['konseling' => config('edukasi.konseling')]);
+    }
+
     public function about()
     {
         return view('about', ['people' => config('edukasi.people')]);

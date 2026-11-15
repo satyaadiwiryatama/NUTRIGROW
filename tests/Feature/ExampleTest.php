@@ -28,6 +28,10 @@ class ExampleTest extends TestCase
         $response = $this->get('/mpasi/6-8');
         $response->assertStatus(200);
 
+        $response = $this->get('/konseling');
+        $response->assertStatus(200);
+        $response->assertSee('Konseling');
+
         $response = $this->get('/about-me');
         $response->assertStatus(200);
     }

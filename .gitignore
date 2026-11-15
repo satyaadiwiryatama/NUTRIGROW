@@ -1,27 +1,69 @@
-*.log
-.DS_Store
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
-/.codex
-/.cursor/
-/.idea
-/.nova
-/.phpunit.cache
-/.vscode
-/.zed
+# ==========================================================
+# Laravel & Project .gitignore
+# ==========================================================
+
+# Environment & Secrets (Never commit credentials or env files)
+/.env
+/.env.*
+!/.env.example
 /auth.json
+
+# Dependencies
 /node_modules
+/vendor
+
+# Laravel Storage, Builds & Generated Files
+*.log
 /public/build
-/public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/public/fonts-manifest.dev.json
 /storage/*.key
 /storage/pail
-/vendor
+
+# Local SQLite Databases
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-shm
+/database/*.sqlite-wal
+
+# Testing & Coverage
+.phpunit.result.cache
+/.phpunit.cache
+/coverage
+
+# Vercel & Deployment
+/.vercel
+
+# IDEs, Editors & Dev Tools
+/.codex
+/.cursor
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+*.sublime-project
+*.sublime-workspace
+.phpactor.json
 _ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
 Homestead.json
 Homestead.yaml
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+[Dd]esktop.ini
+
+# Package Manager Debug Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

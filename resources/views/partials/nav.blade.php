@@ -8,4 +8,5 @@
         <a href="{{ route('mpasi', $slug) }}">{{ $slug }} bulan</a>
     @endforeach
 </div></div>
+<a href="{{ route('konseling') }}" @class(['on' => request()->routeIs('konseling')])>Konseling</a>
 <a href="{{ route('about') }}" @class(['on' => request()->routeIs('about')])>About Me</a>
